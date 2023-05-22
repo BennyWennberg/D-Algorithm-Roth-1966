@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>D* Algorithm -- Roth (1966)
+    </title>
+
+    <link rel="stylesheet" href="styles\header.css">
+    <link rel="stylesheet" href="styles\main.css">
+    <link rel="stylesheet" href="styles\general.css">
+    <link rel="stylesheet" href="styles\grid.css">
+
+
+</head>
+<body style="min-width:1000px; width: auto !important;  width:1000px;" >
+    <div class="header">
+        <div class="left-section">
+            <button class="button-title">
+                <a style="color: white; font-size: 25px; margin-left: unset;" class="space" href="Definition_roth1966.html">D* Algorithm -- Roth(1966)</a>
+            </button>
+        </div>
+        <div class="middle-section">
+            <button class="button_title">
+                <a href="Definition_roth1966.html">Definition</a>
+            </button>
+            <button class="button_title">
+                <a href="Logic_algorithm_task.html">Logic</a>
+            </button>
+            <button class="button_title">
+                <a href="Rules_rules.html">Rules</a>
+            </button>
+            <button class="button_title">
+                <a href="Example_sa0.html">Examples</a>
+            </button>
+            <button class="button_title">
+                <a href="easy_1.html">Tests</a>
+            </button>
+        </div>
+        <div class="right-section">
+        </div>
+    </div>
+    <main class="main">
+        <div class="row">
+            <div id="content_left" class="box" style="width: 66%; min-width: 550px;">
+                <!-- Text Inhalt-->
+            <div>
+                <h4>D*-Algorithm - Roth(1966) ~ Hard ( 2 | 3 )</h4> 
+                <p><strong>Guide:</strong></p>
+                <p>To solve this algorithm, set the Stuck-At-Fault entries and follow the given algorithm. For the circuit showing below, the algorithm finds the SA1, that is being generated. This Stuck-at-Fault has to be detected at the output. If you cannot solve the circuit, repeat the rules of the algorithm.</p>.
+                <p>For help, you can use  the "Hints" button 5 times otherwise reset the circuit with the "Reset" button. The algorithm has an anti-puzzle code. You can't guess any in- ,outputs or unexplained in- ,outputs.</p>
+                <p>Follow the rules of the algorithm and use the "Solve" button if you want to compare your solution for this circuit..</p>
+            </div>
+            <div id="Schaltkreis"  class="gitter">
+                <div id="alle-dropwboxen" class="dropbox">
+                    <div id="a" class="overlay_dropdown"
+                        style=" margin-left: 50px ;">
+                        <select  id="dropdown_a">
+                            <option value="_">a</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="D">D</option>
+                            <option value="D'">D'</option>
+                        </select>
+                    </div>  
+                         <div id="b" class="overlay_dropdown"
+                            style=" margin-left: 175px ;">
+                            <select  id="dropdown_b">
+                                <option value="_">b</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="D">D</option>
+                                <option value="D'">D'</option>
+                            </select>
+                        </div> 
+                        <div id="c" class="overlay_dropdown"
+                            style=" margin-left: 300px ;">
+                            <select  id="dropdown_c">
+                                <option value="_">c</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="D">D</option>
+                                <option value="D'">D'</option>
+                            </select>
+                        </div> 
+        
+                        <div id="d" class="overlay_dropdown"
+                        style=" margin-left: 420px;">
+                                <select  id="dropdown_d">
+                                    <option value="_">d</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="D">D</option>
+                                    <option value="D'">D'</option>
+                                </select>
+                        </div>
+                        <div id="e" class="overlay_dropdown"
+                                style="margin-left:135px;margin-top: 110px;width: 25px;">
+                                <select  id="dropdown_e">
+                                    <option value="_">e</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="D">D</option>
+                                    <option value="D'">D'</option>
+                                </select>
+                        </div>
+                        <div id="f" class="overlay_dropdown"
+                        style="margin-left:450px;margin-top: 110px;width: 25px;">
+                            <select  id="dropdown_f">
+                                <option value="_">f</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="D">D</option>
+                                <option value="D'">D'</option>
+                            </select>
+                        </div>
+
+                        <div id="g" class="overlay_dropdown"
+                        style="margin-left:5px;margin-top: 220px;width: 25px;">
+                            <select  id="dropdown_g">
+                                <option value="_">g</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="D">D</option>
+                                <option value="D'">D'</option>
+                            </select>
+                        </div>
+
+                        <div id="h" class="overlay_dropdown"
+                        style="margin-left:90px;margin-top: 210px;width: 25px;">
+                            <select  id="dropdown_h">
+                                <option value="_">h</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="D">D</option>
+                                <option value="D'">D'</option>
+                            </select>
+                        </div>
+
+                        <div id="i" class="overlay_dropdown"
+                        style="margin-left:250px;margin-top: 260px;width: 25px;">
+                            <select  id="dropdown_i">
+                                <option value="_">i</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="D">D</option>
+                                <option value="D'">D'</option>
+                            </select>
+                        </div>
+
+
+                        <div id="j" class="overlay_dropdown"
+                        style="margin-left:430px;margin-top: 210px;width: 25px;">
+                        <select  id="dropdown_j">
+                            <option value="_">j</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="D">D</option>
+                            <option value="D'">D'</option>
+                        </select>
+                        </div>
+
+                        <div id="k" class="overlay_dropdown"
+                        style="margin-left:70px;margin-top: 300px;width: 25px;">
+                            <select  id="dropdown_k">
+                                <option value="_">k</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="D">D</option>
+                                <option value="D'">D'</option>
+                            </select>
+                        </div>
+
+
+                        <div id="l" class="overlay_dropdown"
+                        style="margin-left:90px;margin-top: 410px;width: 25px;">
+                        <select  id="dropdown_l">
+                            <option value="_">l</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="D">D</option>
+                            <option value="D'">D'</option>
+                        </select>
+                        </div>
+
+                        <div id="m" class="overlay_dropdown"
+                        style="margin-left:330px;margin-top: 410px;width: 25px;">
+                        <select  id="dropdown_m">
+                            <option value="_">m</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="D">D</option>
+                            <option value="D'">D'</option>
+                        </select>
+                        </div>
+                        <div id="lout" class="overlay_dropdown"
+                                style="margin-left:260px;margin-top: 490px;width: 25px;">
+                                <select  id="dropdown_out">
+                                    <option value="_">out</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="D">D</option>
+                                    <option value="D'">D'</option>
+                                </select>
+                        </div>
+                        <div class="overlay_dropdown" 
+                        style= "margin-left:150px;
+                        margin-top: 175px;
+                        width: 100px;">
+                            <p style="font-size: 30px;color: rgb(188, 0, 0);">&#10008;</p>
+                            <span id="Sat" style="color: black; font-size: 20px;">SA0</span>
+                        </div>
+                </div>
+                <div class="four_grid_column">
+                    <div>
+                        a
+                    </div>
+                    <div style="text-align: right;">
+                        
+                    </div>
+                    <div style="text-align: right;">
+                        
+                    </div>
+                </div>
+                <div class="wires">
+                    <div>
+                        <canvas id="canvas1" width="125" height="100" ></canvas>
+                    </div>
+                    <div>
+                        <canvas id="canvas2" width="125" height="100" ></canvas>
+                    </div>
+                    <div>
+                        <canvas id="canvas3" width="125" height="100" ></canvas>
+                    </div>
+                    <div>
+                        <canvas id="canvas4" width="125" height="100" ></canvas>
+                    </div>
+                </div>
+                <div class="wires">
+                    <div>
+                        <canvas id="canvas5" width="125" height="100" ></canvas>
+                    </div>
+                    <div>
+                        <canvas id="canvas6" width="125" height="100" ></canvas>
+                    </div>
+                    <div>
+                        <canvas id="canvas7" width="125" height="100" ></canvas>
+                    </div>                        <div>
+                        <canvas id="canvas8" width="125" height="100" ></canvas>
+                    </div>
+                </div>
+                <div class="wires">
+                    <div>
+                        <canvas id="canvas9" width="125" height="100" ></canvas>
+                    </div>
+                    <div>
+                        <canvas id="canvas10" width="125" height="100" ></canvas>
+                    </div>
+                    <div>
+                        <canvas id="canvas11" width="125" height="100" ></canvas>
+                    </div>                        <div>
+                        <canvas id="canvas12" width="125" height="100" ></canvas>
+                    </div>
+                </div>
+                <div class="wires">
+                    <div>
+                        <canvas id="canvas13" width="125" height="100" ></canvas>
+                    </div>
+                    <div>
+                        <canvas id="canvas14" width="125" height="100" ></canvas>
+                    </div>
+                    <div>
+                        <canvas id="canvas15" width="125" height="100" ></canvas>
+                    </div>
+                    <div>
+                        <canvas id="canvas16" width="125" height="100" ></canvas>
+                    </div>
+                </div>
+                <div class="wires">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        <canvas id="canvas18" width="125" height="100" ></canvas>
+                    </div>
+                    <div>
+                        <canvas id="canvas19" width="125" height="100" ></canvas>
+                    </div>
+                    <div>
+                        
+                    </div>
+        
+                </div>
+                <div class="prev_next">
+                    <button id="hint_button" style="font-size: 25px; color: unset;" onclick="give_one_solution(),hide_button()"> hint</button>
+                    <button style="font-size: 25px; color: unset;" onclick=""><a href="easy_1.html" style="color: unset;" >reset</a></button>
+                    <button style="color: black;"> <a href="Exercise_hard_1.html" style="color: unset;" ><span>&#129092;</span> </a></button>
+                    <button style="color: black;"><a href="Exercise_hard_3.html" style="color: unset;" ><span>&#129094;</span></a></button>
+                    <button style="font-size: 25px; color: unset;" onclick="solve_path_byStudent(), get_Color_Correction(), give_values_to_HTML()">solve</button>
+            </div> 
+
+            <div class="border_line_bottom"><br>
+                <p>The algorithm compares your given inputs with the algortihm. A path will turn green, if u detect the path right and it will turn red if you calculate it wrong. </p>
+                <br>
+                <p> If you failed the circuit after 10 trys or 25 faults, the solution of this circuit will be shown below.</p>
+            <div class="two_grid_column" style="background-color: unset; text-align: unset;">
+                <div class="info_site" style="min-width: 250px">
+                    <div style="height: 200px;">
+                        <h4><u>Error statistics</u></h4>
+                            <form class="hidden" id="show_info">
+                            Faults Counter :<p id="faultsID"></p> 
+                            <br>
+                            Trys Counter: <p id="trysID"></p>
+                            <br>
+                            Hints Counter: <p id="hintsID"></p>
+                            <br>
+                        </form>
+                    </div>
+                </div>
+                <div >
+                    <h4><u>Error Message</u></h4>
+                    <p id="error_message" class="error_message" style="list-style: unset;"></p>
+                    <br>
+                </div>
+            </div>
+            </div>
+            <br>
+            <button id="solution_button" class="hide" style="color: black; font-size: 25px;" onclick="show_solution()">show solution</button>
+          <!-- class hide-->
+            <div id="solution">
+                <br>
+                <div class="four_grid_column">
+                    <div>
+                       <h5 style="margin: 5px;">a</h5> 
+                    </div>
+                    <div>
+                        <h5 style="margin: 5px;">b</h5>
+                    </div>
+                    <div>
+                        <h5 style="margin: 5px;">c</h5>
+                    </div>
+                    <div>
+                        <h5 style="margin: 5px;">d</h5>
+                    </div>
+                </div>
+                <p>
+                    Inputs:
+                </p>
+                
+                <div class="four_grid_column" style="background-color: unset;">
+                    <div id="bla_a" class="sort">
+                        _
+                    </div>
+                    <div id="bla_b" class="sort">
+                        _
+                    </div>
+                    <div id="bla_c" class="sort">
+                        _
+                    </div>
+                    <div id="bla_d" class="sort">
+                        _
+                    </div>
+                </div>
+                <p>
+                    Student's Inputs: 
+                </p>
+                
+                <div class="four_grid_column" style="background-color: unset">
+                    <div id="blaa" class="sort">
+                        _
+                    </div>
+                    <div id="blab" class="sort">
+                        _
+                    </div>
+                    <div id="blac" class="sort">
+                        _
+                    </div>
+                    <div id="blad" class="sort">
+                        _
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="two_grid_column">
+                    <div class="sort">
+                        <h5 style="margin: 5px;">i</h5>
+                    </div>
+                    <div class="sort">
+                        <h5 style="margin: 5px;">h</h5>
+                    </div>
+                </div>
+                <p>
+                    SA1
+                </p>
+                
+                <div class="two_grid_column" style="background-color: unset">
+                    <div id="bla_i" class="sort">
+                        _
+                    </div>
+                    <div id="bla_h" class="sort">
+                        _
+                    </div>
+                </div>
+                <p>
+                    Student's SA1 In- Output
+                </p>
+                
+                <div class="two_grid_column" style="background-color: unset">
+                    <div id="blai" class="sort">
+                        _
+                    </div>
+                    <div id="blah" class="sort">
+                        _
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="seven_grid_column">
+                    <div class="sort">
+                        <h5 style="margin: 5px;">e</h5>
+                    </div>
+                    <div class="sort">
+                        <h5 style="margin: 5px;">f</h5>
+                    </div>
+                    <div class="sort">
+                        <h5 style="margin: 5px;">g</h5>
+                    </div>
+                    <div class="sort">
+                        <h5 style="margin: 5px;">j</h5>
+                    </div>
+                    <div class="sort">
+                        <h5 style="margin: 5px;">k</h5>
+                    </div>
+                    <div class="sort">
+                        <h5 style="margin: 5px;">l</h5>
+                    </div>
+                    <div class="sort">
+                        <h5 style="margin: 5px;">m</h5>
+                    </div>
+                </div>
+                <p>
+                    Input Solution
+                </p>
+                
+                <div class="six_grid_column" style="background-color: unset">
+                    <div id="bla_e" class="sort">
+                        _
+                    </div>
+                    <div id="bla_f" class="sort">
+                        _
+                    </div>
+                    <div id="bla_g" class="sort">
+                        _
+                    </div>
+                    <div id="bla_j" class="sort">
+                        _
+                    </div>
+                    <div id="bla_k" class="sort">
+                        _
+                    </div>
+                    <div id="bla_l" class="sort">
+                        _
+                    </div>
+                    <div id="bla_m" class="sort">
+                        _
+                    </div>
+                </div>
+                <p>
+                    Student's SA1 In- Output
+                </p>
+                
+                <div class="six_grid_column" style="background-color: unset">
+                    <div id="blae" class="sort">
+                        _
+                    </div>
+                    <div id="blaf" class="sort">
+                        _
+                    </div>
+                    <div id="blag" class="sort">
+                        _
+                    </div>
+                    <div id="blaj" class="sort">
+                        _
+                    </div>
+                    <div id="blak" class="sort">
+                        _
+                    </div>
+                    <div id="blal" class="sort">
+                        _
+                    </div>
+                    <div id="blam" class="sort">
+                        _
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="one_grid_column">
+                    <div class="sort">
+                        <h5 style="margin: 5px;">Out</h5>
+                    </div>
+                </div>
+                <p>
+                    Calculate Outputs:
+                </p>
+                <div class="one_grid_column" style="background-color: unset;">
+                    <div id="bla_out">
+                        _
+                    </div>
+                </div>
+                <p>
+                    Student's Output:
+                </p>
+                <div class="one_grid_column" style="background-color: unset;">
+
+                        <div id="blaout" class="sort" >
+                            _
+                        </div>
+                </div>
+            </div>
+            
+
+        </div>
+            <br>
+            </div>
+            <div id="sidebar_right" class="box">
+                <h3>Tabel of Contents</h3>
+                <p class='text-muted'>The D-Algorithm (D-ALG) was developed by Roth in 1966
+                <div class="sidebar">
+                    <li class="get_text_indented">Definiton 
+                        <br>
+                        <a class="button_sidebar" href="Definition_roth1966.html">Roth (1966)</a>
+                    </li>
+                    <li class="get_text_indented">Logic
+                        <br>
+                        <a class="button_sidebar" href="Logic_algorithm_task.html"> Algorithm Task</a>
+                        <a class="button_sidebar" href="Logic_algorithm_pattern.html"> Algorithm Pattern</a>
+                    </li> 
+                    <li class="get_text_indented">Rules
+                        <br>
+                        <a class="button_sidebar" href="Rules_rules.html">Rules</a>
+                        <a class="button_sidebar" href="Rules_backtracking.html"> Backtracking</a>
+                    </li>
+                    <li class="get_text_indented">Example
+                        <br>
+                        <a class="button_sidebar" href="Example_sa0.html"> SA0</a>
+                        <a class="button_sidebar" href="Example_sa1.html"> SA1</a>
+                        <a class="button_sidebar" href="Example_backtracking.html"> Backtracking</a>
+                    </li>
+                    <li class="get_text_indented">Exercise
+                        <br>
+                        <a class="button_sidebar" href="Exercise_easy_1.html"> Easy</a>
+                        <a class="button_sidebar" href="Exercise_middle_1.html"> Middle</a>
+                        <a class="button_sidebar"> Hard</a>
+                    </li>
+                </div>
+                <footer>
+                    <p>@2023 Bachelorproject Benny Wennberg </p>
+                </footer>
+            </div>  
+        </div>   
+    </main> 
+    <script src="scripts/createHard_2.js"></script>
+</body>
+</html>
