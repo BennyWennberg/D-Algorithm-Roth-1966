@@ -53,28 +53,23 @@ function getPicture() {
     }
     else if (count_Picture == 5) {
         step_path.innerHTML = " Step 5"
-        current_path.src = "picture/back_5.png"
-        describtion_path.innerHTML = "<h4>Step 5: </h4>  <p>For G3 we choose the same approach as G6. For G4, there is one single J-frontier case.</p>";
+        current_path.src = "picture/back_6.png"
+        describtion_path.innerHTML = "<h4>Step 5: </h4>  <p>Since we know the input of c is high. We find the consistency on input c. We declare the other Input of G3 as low in d since the output is high.  We backward implicate for G4. There is just one option for the input. We're choosing {1, 1, 0}.</p>";
     }
     else if (count_Picture == 6) {
         step_path.innerHTML = " Step 6"
-        current_path.src = "picture/back_6.png"
-        describtion_path.innerHTML = "<h4>Step 6: </h4>  <p>We find the consistency on input c. But we're looking forward to input d.</p>";
+        current_path.src = "picture/back_7.png"
+        describtion_path.innerHTML = "<h4>Step 6: </h4>  <p>We locate an inconsistency on input d. We have to backtrack to the last decision.</p>";
     }
     else if (count_Picture == 7) {
         step_path.innerHTML = " Step 7"
-        current_path.src = "picture/back_7.png"
-        describtion_path.innerHTML = " <h4>Step 7: </h4>  <p>We locate an inconsistency on input d. We have to backtrack to the last decision.</p>";
+        current_path.src = "picture/back_8.png"
+        describtion_path.innerHTML = "<p>Step 7: </p>  <p>We declare the inputs of G6 again. We are swapping the value of h to low.</p>";
     }
     else if (count_Picture == 8) {
         step_path.innerHTML = " Step 8"
-        current_path.src = "picture/back_8.png"
-        describtion_path.innerHTML = "<p>Step 8: </p>  <p>We declare the inputs of G6 again. We decide to declare the inputs in low, low.</p>";
-    }
-    else if (count_Picture == 9) {
-        step_path.innerHTML = " Step 9"
         current_path.src = "picture/back_9.png"
-        describtion_path.innerHTML = "<h4>Step 9: </h4>  <p>Thereupon we see the consistency on this example.</p>";
+        describtion_path.innerHTML = "<h4>Step 8: </h4>  <p>Thereupon we see the consistency on this example.</p>";
     }
 
 }

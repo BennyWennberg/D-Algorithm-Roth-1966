@@ -1005,78 +1005,78 @@ function solve_path_byStudent() {
     // declare output with Input I, K, L, J
     // first I and K into Out1
     if((bla_i.value == "0") && (bla_k.value == "0")) {
-        bla_1 = "1";
+        bla_1 = "0";
     } else if ((bla_i.value == "0") && (bla_k.value == "1")) {
-        bla_1 = "1";
+        bla_1 = "0";
     } else if((bla_i.value == "0") && (bla_k.value == "D")) {
-        bla_1 = "1";
+        bla_1 = "0";
     } else if ((bla_i.value == "0") && (bla_k.value == "D'")) {
-        bla_1 = "1";
+        bla_1 = "0";
 
     } else if((bla_i.value == "1") && (bla_k.value == "0")) {
-        bla_1 = "1";
-    } else if ((bla_i.value == "1") && (bla_k.value == "1")) {
         bla_1 = "0";
+    } else if ((bla_i.value == "1") && (bla_k.value == "1")) {
+        bla_1 = "1";
     } else if((bla_i.value == "1") && (bla_k.value == "D")) {
-        bla_1 = "D'";
-    } else if ((bla_i.value == "1") && (bla_k.value == "D'")) {
         bla_1 = "D";
+    } else if ((bla_i.value == "1") && (bla_k.value == "D'")) {
+        bla_1 = "D'";
 
     } else if((bla_i.value == "D") && (bla_k.value == "0")) {
-        bla_1 = "1";
+        bla_1 = "0";
     } else if((bla_i.value == "D") && (bla_k.value == "1")) {
-        bla_1 = "D'";
+        bla_1 = "D";
     } else if ((bla_i.value == "D") && (bla_k.value == "D")) {
-        bla_1 = "D'"; 
+        bla_1 = "D"; 
     } else if((bla_i.value == "D") && (bla_k.value == "D'")) {
-        bla_1 = "1";
+        bla_1 = "0";
 
     } else if ((bla_i.value == "D'") && (bla_k.value == "0")) {
-        bla_1 = "1";
+        bla_1 = "0";
     }else if((bla_i.value == "D'") && (bla_k.value == "1")) {
-        bla_1 = "D";
+        bla_1 = "D'";
     } else if ((bla_i.value == "D'") && (bla_k.value == "D")) {
-        bla_1 = "1";
+        bla_1 = "0";
     } else if((bla_i.value == "D'") && (bla_k.value == "D'")) {
-        bla_1 = "D";
+        bla_1 = "D'";
     }  
 
     // Second L and J into Out2
     if((bla_l.value == "0") && (bla_j.value == "0")) {
-        bla_2 = "1";
+        bla_2 = "0";
     } else if ((bla_l.value == "0") && (bla_j.value == "1")) {
-        bla_2 = "1";
+        bla_2 = "0";
     } else if((bla_l.value == "0") && (bla_j.value == "D")) {
-        bla_2 = "1";
+        bla_2 = "0";
     } else if ((bla_l.value == "0") && (bla_j.value == "D'")) {
-        bla_2 = "1";
+        bla_2 = "0";
 
     } else if((bla_l.value == "1") && (bla_j.value == "0")) {
-        bla_2 = "1";
-    } else if ((bla_l.value == "1") && (bla_j.value == "1")) {
         bla_2 = "0";
+    } else if ((bla_l.value == "1") && (bla_j.value == "1")) {
+        bla_2 = "1";
     } else if((bla_l.value == "1") && (bla_j.value == "D")) {
-        bla_2 = "D'";
-    } else if ((bla_l.value == "1") && (bla_j.value == "D'")) {
         bla_2 = "D";
+    } else if ((bla_l.value == "1") && (bla_j.value == "D'")) {
+        bla_2 = "D'";
 
     } else if((bla_l.value == "D") && (bla_j.value == "0")) {
-        bla_2 = "1";
+        bla_2 = "0";
     } else if((bla_l.value == "D") && (bla_j.value == "1")) {
-        bla_2 = "D'";
+        bla_2 = "D";
     } else if ((bla_l.value == "D") && (bla_j.value == "D")) {
-        bla_2 = "D'"; 
+        bla_2 = "D"; 
     } else if((bla_l.value == "D") && (bla_j.value == "D'")) {
-        bla_2 = "1";
+        bla_2 = "0";
 
     } else if ((bla_l.value == "D'") && (bla_j.value == "0")) {
-        bla_2 = "1";
+        bla_2 = "0";
     }else if((bla_l.value == "D'") && (bla_j.value == "1")) {
-        bla_2 = "D";
+        bla_2 = "D'";
     } else if ((bla_l.value == "D'") && (bla_j.value == "D")) {
-        bla_2 = "1";
+        bla_2 = "0";
     } else if((bla_l.value == "D'") && (bla_j.value == "D'")) {
-        bla_2 = "D";
+        bla_2 = "D'";
     }  
 
     // Last Out1 and Out2 into Output
