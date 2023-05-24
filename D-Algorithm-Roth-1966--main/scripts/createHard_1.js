@@ -1809,7 +1809,7 @@ function give_one_solution() {
             alert("The value of L is currently "+bla_l.value+". It depends on the inputs of H2 and D2.");    
         }
         else if((blaout.value != bla_out.value) || bla_out.value == "1" || bla_out.value == "0") {
-            alert("The output of the circuit must be set to D or D'as explained in the examples.");    
+            alert("The output of the circuit must be set to D or D'as explained in the examples. The value of the output is currently "+bla_out.value+".");    
         }
         else if(blai.value != bla_i.value) {
             alert("The value of I is currently "+bla_i.value+". It depends on the Output and the values of B2 and E.");    
